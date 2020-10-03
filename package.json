@@ -1,0 +1,27 @@
+{
+    "name": "p5.tween",
+    "version": "1.0.0",
+    "description": "A simple library to use tweens in p5.js",
+    "main": "dist/p5.tween.js",
+    "scripts": {
+        "build": "grunt",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "tween",
+        "animation",
+        "p5js"
+    ],
+    "author": "Nick 'Milchreis' Müller",
+    "license": "MIT",
+    "devDependencies": {
+        "grunt": "^1.3.0",
+        "grunt-contrib-clean": "^2.0.0",
+        "grunt-contrib-concat": "^1.0.1",
+        "grunt-contrib-uglify-es": "^3.3.0",
+        "grunt-ts": "^6.0.0-beta.22",
+        "ts-loader": "^8.0.4",
+        "typescript": "^4.0.3"
+    },
+    "dependencies": {}
+}
