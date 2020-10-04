@@ -95,6 +95,7 @@ p5.tween.manager
 				<a href="#examples" id="examples" style="color: inherit; text-decoration: none;">
 					<h2>Examples</h2>
 				</a>
+				<p>All examples are saved in the p5.tween collection: <a href="https://editor.p5js.org/Milchreis/collections/oHxcCR17k">https://editor.p5js.org/Milchreis/collections/oHxcCR17k</a></p>
 				<a href="#create-a-tween-with-step-by-step-motions" id="create-a-tween-with-step-by-step-motions" style="color: inherit; text-decoration: none;">
 					<h3>Create a tween with step by step motions</h3>
 				</a>
@@ -110,22 +111,53 @@ p5.tween.manager
 				<a href="#create-a-tween-with-simultanious-motions" id="create-a-tween-with-simultanious-motions" style="color: inherit; text-decoration: none;">
 					<h3>Create a tween with simultanious motions</h3>
 				</a>
-				<pre><code class="language-js">p5.tween.manager.addTween(myShape)
-    .addMotion(<span class="hljs-string">&#x27;x&#x27;</span>, <span class="hljs-number">10</span>, <span class="hljs-number">1000</span>)
-    .addMotion(<span class="hljs-string">&#x27;y&#x27;</span>, <span class="hljs-number">10</span>, <span class="hljs-number">1000</span>)
-    .addMotion(<span class="hljs-string">&#x27;x&#x27;</span>, width - <span class="hljs-number">10</span>, <span class="hljs-number">1000</span>)
-    .addMotion(<span class="hljs-string">&#x27;y&#x27;</span>, height - <span class="hljs-number">10</span>, <span class="hljs-number">1000</span>)
-    .addMotion(<span class="hljs-string">&#x27;x&#x27;</span>, <span class="hljs-number">200</span>, <span class="hljs-number">500</span>)
-    .addMotion(<span class="hljs-string">&#x27;y&#x27;</span>, <span class="hljs-number">200</span>, <span class="hljs-number">500</span>)
+				<pre><code class="language-js">  p5.tween.manager.addTween(myShape)
+    .addMotions([
+        { <span class="hljs-attr">key</span>: <span class="hljs-string">&#x27;x&#x27;</span>, <span class="hljs-attr">target</span>: <span class="hljs-number">10</span> },
+        { <span class="hljs-attr">key</span>: <span class="hljs-string">&#x27;y&#x27;</span>, <span class="hljs-attr">target</span>: <span class="hljs-number">10</span> },
+      ], <span class="hljs-number">1000</span>)
+    .addMotions([
+        { <span class="hljs-attr">key</span>: <span class="hljs-string">&#x27;x&#x27;</span>, <span class="hljs-attr">target</span>: width - <span class="hljs-number">10</span> },
+        { <span class="hljs-attr">key</span>: <span class="hljs-string">&#x27;y&#x27;</span>, <span class="hljs-attr">target</span>: height - <span class="hljs-number">10</span> },
+      ], <span class="hljs-number">1000</span>)
+    .addMotions([
+        { <span class="hljs-attr">key</span>: <span class="hljs-string">&#x27;x&#x27;</span>, <span class="hljs-attr">target</span>: <span class="hljs-number">200</span> },
+        { <span class="hljs-attr">key</span>: <span class="hljs-string">&#x27;y&#x27;</span>, <span class="hljs-attr">target</span>: <span class="hljs-number">200</span> },
+      ], <span class="hljs-number">500</span>)
     .startLoop()</code></pre>
+				<p><a href="https://editor.p5js.org/Milchreis/present/VZVfZiFvL">Example-Code</a></p>
 				<a href="#api" id="api" style="color: inherit; text-decoration: none;">
 					<h2>API</h2>
 				</a>
 				<ul>
 					<li><a href="https://milchreis.github.io/p5.tween/docs">API-Doc</a></li>
 				</ul>
+				<a href="#most-used-methods" id="most-used-methods" style="color: inherit; text-decoration: none;">
+					<h3>Most used methods</h3>
+				</a>
+				<pre><code class="language-js"><span class="hljs-comment">// Add tween to manager and return the instance</span>
+<span class="hljs-keyword">let</span> tween = p5.tween.manager.addTween(yourObject, <span class="hljs-string">&#x27;name for your tween&#x27;</span>)
+
+<span class="hljs-comment">// Returns your previous added tween by name</span>
+<span class="hljs-keyword">let</span> tween = p5.tween.manager.getTween(<span class="hljs-string">&#x27;name for your tween&#x27;</span>)
+
+<span class="hljs-comment">// Adds a motion for the &#x27;key&#x27; of &#x27;yourObject&#x27; (means yourObject.key) </span>
+<span class="hljs-comment">// to the target value in the given time</span>
+tween.addMotion(<span class="hljs-string">&#x27;key&#x27;</span>, targetValue, timeInMillis)
+
+<span class="hljs-comment">// Adds multiple motions to the tween, which will be played in the same time</span>
+tween.addMotions([{ key, target }])
+
+<span class="hljs-comment">// Removes all motions from tween</span>
+tween.resetMotions()
+
+<span class="hljs-comment">// Starts the tween as loop (will repeat with first motion when the last ends)</span>
+tween.startLoop()
+
+<span class="hljs-comment">// Starts the tween and plays all motions one time</span>
+tween.startTween()</code></pre>
 				<a href="#easing-functions" id="easing-functions" style="color: inherit; text-decoration: none;">
-					<h2>Easing functions</h2>
+					<h3>Easing functions</h3>
 				</a>
 				<p>You can use different easing functions for your tween to change the acceleration:</p>
 				<pre><code class="language-js">tween.addMotion(<span class="hljs-string">&#x27;width&#x27;</span>, <span class="hljs-number">12</span>, <span class="hljs-number">100</span>, <span class="hljs-string">&#x27;easeOutQuad&#x27;</span>)</code></pre>

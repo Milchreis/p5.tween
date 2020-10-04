@@ -17,7 +17,7 @@ p5.tween.manager
     .addTween(object, 'tween1')
     // First motion: change the width (means object.width) to 12 in 100ms
     .addMotion('width', 12, 100, 'easeInOutQuint')
-    // Second Motion: Change x and y to mouse position in 500ms at the same time
+    // Second motion: Change x and y to mouse position in 500ms at the same time
     .addMotions([
                 { key: 'x', target: mouseX },
                 { key: 'y', target: mouseY }

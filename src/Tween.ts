@@ -38,6 +38,15 @@ namespace p5.tween {
             return easingFunction(amt) * (stop - start) + start;
         }
 
+        /**
+         * Adds a new motion to the tween object. When the tween is playing it will change the 
+         * the defined key of the given object to make an animation.
+         * 
+         * @param key       expects the name of the effected key of the given object from constructor
+         * @param target    expects the value for ending postion if this motion
+         * @param duration  expects the duration of this motion in milliseconds
+         * @param easing    optional: the name of the easing-function (default is 'linear')
+         */
         addMotion(key: string, target: number, duration: number, easing: string = 'linear'): Tween {
             this.addToKeyChangeList(key)
             this.motions.push({
@@ -49,7 +58,16 @@ namespace p5.tween {
             return this
         }
 
-        addMotions(actions, duration: number, easing: string = 'linear'): Tween {
+        /**
+         * Adds a new combined motion to the tween objects. In actions are some motions combined, which 
+         * should be changed in the same time. When the tween is playing it will change the 
+         * the defined key of the given object to make an animation.
+         * 
+         * @param actions   expects an array of key-target pairs for this motion
+         * @param duration  expects the duration of this motion in milliseconds
+         * @param easing    optional: the name of the easing-function (default is 'linear')
+         */
+        addMotions(actions: { key: string, target: number}[], duration: number, easing: string = 'linear'): Tween {
             actions.flatMap(a => a.key).forEach((key: string) => this.addToKeyChangeList(key))
 
             this.motions.push({
@@ -61,16 +79,25 @@ namespace p5.tween {
             return this
         }
 
+        /**
+         * Removes all motions from this tween
+         */
         resetMotions() {
             this.motions = []
         }
 
+        /**
+         * Starts the tween and plays it again and again.
+         */
         startLoop(): Tween {
             this.isLoop = true
             this.startTween()
             return this
         }
         
+        /**
+         * Starts the tween and plays it one time
+         */
         startTween(): Tween {
             this.start = this.createStartObject(this.obj)
             this.motionStart = this.createStartObject(this.obj)
