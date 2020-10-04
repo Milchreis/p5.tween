@@ -5,8 +5,27 @@
 ## Usage
 
 1. Add p5.tween.min.js to your sketch after p5.js
+```html
+<script src="https://github.com/Milchreis/p5.tween/raw/master/dist/p5.tween.min.js"></script>
+```
 2. Add a simple tween to your sketch
+```js
+// Adding motions to the TweenManager
+p5.tween.manager
+    // First add a new Tween to the manager for the effected object
+    .addTween(object, 'tween1')
+    // First motion: change the width (means object.width) to 12 in 100ms
+    .addMotion('width', 12, 100, 'easeInOutQuint')
+    // Second Motion: Change x and y to mouse position in 500ms at the same time
+    .addMotions([
+                { key: 'x', target: mouseX },
+                { key: 'y', target: mouseY }
+            ], 500, 'easeInOutQuint')
+    .start()
+```
 
+## Examples
+todo
 
 ## Easing functions
 You can use different easing functions for your tween to change the acceleration:
