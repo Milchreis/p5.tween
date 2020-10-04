@@ -63,6 +63,8 @@ p5.tween.manager.addTween(myShape)
 
 ## API
  * [API-Doc](https://milchreis.github.io/p5.tween/docs)
+  * [TweenManager methods](https://milchreis.github.io/p5.tween/docs/classes/_tweenmanager_.p5.tween.tweenmanager.html)
+  * [Tween methods](https://milchreis.github.io/p5.tween/docs/classes/_tween_.p5.tween.tween.html)
 
 ### Most used methods
 ```js
