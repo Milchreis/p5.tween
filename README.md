@@ -29,6 +29,9 @@ p5.tween.manager
 ## Examples
 todo
 
+## API
+ * [API-Doc](https://milchreis.github.io/p5.tween/)
+
 ## Easing functions
 You can use different easing functions for your tween to change the acceleration:
 ```js
