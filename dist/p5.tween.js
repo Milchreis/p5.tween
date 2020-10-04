@@ -78,12 +78,14 @@ var p5;
             startLoop() {
                 this.isLoop = true;
                 this.startTween();
+                return this;
             }
             startTween() {
                 this.start = this.createStartObject(this.obj);
                 this.motionStart = this.createStartObject(this.obj);
                 this.currentMotionIndex = 0;
                 this.active = true;
+                return this;
             }
             update(deltaTime) {
                 if (!this.active)
@@ -151,7 +153,7 @@ var p5;
 var p5;
 (function (p5) {
     var tween;
-    (function (tween) {
+    (function (tween_1) {
         class TweenManager {
             constructor() {
                 this.tweens = [];
@@ -160,7 +162,10 @@ var p5;
                 return this.tweens.find(t => t.name === name).tween;
             }
             addTween(object, name) {
-                this.tweens.push({ name, tween: new tween.Tween(object) });
+                const tweenName = name || 'tween' + this.tweens.length;
+                const tween = new tween_1.Tween(object);
+                this.tweens.push({ name: tweenName, tween });
+                return tween;
             }
             update(deltaTime) {
                 for (let tweenItem of this.tweens) {
@@ -168,8 +173,8 @@ var p5;
                 }
             }
         }
-        tween.manager = new TweenManager();
-        p5['prototype'].registerMethod('pre', () => tween.manager.update(p5['deltaTime']));
+        tween_1.manager = new TweenManager();
+        p5['prototype'].registerMethod('pre', () => tween_1.manager.update(window['deltaTime']));
     })(tween = p5.tween || (p5.tween = {}));
 })(p5 || (p5 = {}));
 //# sourceMappingURL=TweenManager.js.map

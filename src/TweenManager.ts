@@ -14,13 +14,16 @@ namespace p5.tween {
         }
 
         /**
-         * Adds a new Tween to the TweenManager
+         * Adds a new Tween to the TweenManager and returns the Tween object.
          * 
          * @param object The effected object of this tween
          * @param name The name for this Tween, to get is later back from TweenManager
          */
-        addTween(object, name: string) {
-            this.tweens.push({ name, tween: new Tween(object) })
+        addTween(object, name: string): Tween {
+            const tweenName = name || 'tween' + this.tweens.length
+            const tween = new Tween(object)
+            this.tweens.push({ name: tweenName, tween })
+            return tween
         }
 
         /**
@@ -37,5 +40,5 @@ namespace p5.tween {
     export const manager = new TweenManager()
 
     // Register the manager.update() method to call it before each draw loop 
-    p5['prototype'].registerMethod('pre', () => manager.update(p5['deltaTime']));
+    p5['prototype'].registerMethod('pre', () => manager.update(window['deltaTime']));
 }

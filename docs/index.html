@@ -95,7 +95,29 @@ p5.tween.manager
 				<a href="#examples" id="examples" style="color: inherit; text-decoration: none;">
 					<h2>Examples</h2>
 				</a>
-				<p>todo</p>
+				<a href="#create-a-tween-with-step-by-step-motions" id="create-a-tween-with-step-by-step-motions" style="color: inherit; text-decoration: none;">
+					<h3>Create a tween with step by step motions</h3>
+				</a>
+				<pre><code class="language-js">p5.tween.manager.addTween(myShape)
+    .addMotion(<span class="hljs-string">&#x27;x&#x27;</span>, <span class="hljs-number">10</span>, <span class="hljs-number">1000</span>)
+    .addMotion(<span class="hljs-string">&#x27;y&#x27;</span>, <span class="hljs-number">10</span>, <span class="hljs-number">1000</span>)
+    .addMotion(<span class="hljs-string">&#x27;x&#x27;</span>, width - <span class="hljs-number">10</span>, <span class="hljs-number">1000</span>)
+    .addMotion(<span class="hljs-string">&#x27;y&#x27;</span>, height - <span class="hljs-number">10</span>, <span class="hljs-number">1000</span>)
+    .addMotion(<span class="hljs-string">&#x27;x&#x27;</span>, <span class="hljs-number">200</span>, <span class="hljs-number">500</span>)
+    .addMotion(<span class="hljs-string">&#x27;y&#x27;</span>, <span class="hljs-number">200</span>, <span class="hljs-number">500</span>)
+    .startLoop()</code></pre>
+				<p><a href="https://editor.p5js.org/Milchreis/present/u1IL1Tqzm">Example-Code</a></p>
+				<a href="#create-a-tween-with-simultanious-motions" id="create-a-tween-with-simultanious-motions" style="color: inherit; text-decoration: none;">
+					<h3>Create a tween with simultanious motions</h3>
+				</a>
+				<pre><code class="language-js">p5.tween.manager.addTween(myShape)
+    .addMotion(<span class="hljs-string">&#x27;x&#x27;</span>, <span class="hljs-number">10</span>, <span class="hljs-number">1000</span>)
+    .addMotion(<span class="hljs-string">&#x27;y&#x27;</span>, <span class="hljs-number">10</span>, <span class="hljs-number">1000</span>)
+    .addMotion(<span class="hljs-string">&#x27;x&#x27;</span>, width - <span class="hljs-number">10</span>, <span class="hljs-number">1000</span>)
+    .addMotion(<span class="hljs-string">&#x27;y&#x27;</span>, height - <span class="hljs-number">10</span>, <span class="hljs-number">1000</span>)
+    .addMotion(<span class="hljs-string">&#x27;x&#x27;</span>, <span class="hljs-number">200</span>, <span class="hljs-number">500</span>)
+    .addMotion(<span class="hljs-string">&#x27;y&#x27;</span>, <span class="hljs-number">200</span>, <span class="hljs-number">500</span>)
+    .startLoop()</code></pre>
 				<a href="#api" id="api" style="color: inherit; text-decoration: none;">
 					<h2>API</h2>
 				</a>

@@ -65,16 +65,18 @@ namespace p5.tween {
             this.motions = []
         }
 
-        startLoop() {
+        startLoop(): Tween {
             this.isLoop = true
             this.startTween()
+            return this
         }
-
-        startTween() {
+        
+        startTween(): Tween {
             this.start = this.createStartObject(this.obj)
             this.motionStart = this.createStartObject(this.obj)
             this.currentMotionIndex = 0
             this.active = true
+            return this
         }
 
         update(deltaTime: number) {

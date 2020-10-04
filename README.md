@@ -27,12 +27,69 @@ p5.tween.manager
 ```
 
 ## Examples
-todo
+All examples are saved in the p5.tween collection: https://editor.p5js.org/Milchreis/collections/oHxcCR17k
+
+### Create a tween with step by step motions
+```js
+p5.tween.manager.addTween(myShape)
+    .addMotion('x', 10, 1000)
+    .addMotion('y', 10, 1000)
+    .addMotion('x', width - 10, 1000)
+    .addMotion('y', height - 10, 1000)
+    .addMotion('x', 200, 500)
+    .addMotion('y', 200, 500)
+    .startLoop()
+```
+[Example-Code](https://editor.p5js.org/Milchreis/present/u1IL1Tqzm)
+
+### Create a tween with simultanious motions
+```js
+  p5.tween.manager.addTween(myShape)
+    .addMotions([
+        { key: 'x', target: 10 },
+        { key: 'y', target: 10 },
+      ], 1000)
+    .addMotions([
+        { key: 'x', target: width - 10 },
+        { key: 'y', target: height - 10 },
+      ], 1000)
+    .addMotions([
+        { key: 'x', target: 200 },
+        { key: 'y', target: 200 },
+      ], 500)
+    .startLoop()
+```
+[Example-Code](https://editor.p5js.org/Milchreis/present/VZVfZiFvL)
 
 ## API
  * [API-Doc](https://milchreis.github.io/p5.tween/docs)
 
-## Easing functions
+### Most used methods
+```js
+// Add tween to manager and return the instance
+let tween = p5.tween.manager.addTween(yourObject, 'name for your tween')
+
+// Returns your previous added tween by name
+let tween = p5.tween.manager.getTween('name for your tween')
+
+// Adds a motion for the 'key' of 'yourObject' (means yourObject.key) 
+// to the target value in the given time
+tween.addMotion('key', targetValue, timeInMillis)
+
+// Adds multiple motions to the tween, which will be played in the same time
+tween.addMotions([{ key, target }])
+
+// Removes all motions from tween
+tween.resetMotions()
+
+// Starts the tween as loop (will repeat with first motion when the last ends)
+tween.startLoop()
+
+// Starts the tween and plays all motions one time
+tween.startTween()
+```
+
+### Easing functions
 You can use different easing functions for your tween to change the acceleration:
 ```js
 tween.addMotion('width', 12, 100, 'easeOutQuad')
