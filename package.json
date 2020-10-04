@@ -12,7 +12,14 @@
         "animation",
         "p5js"
     ],
-    "author": "Nick 'Milchreis' Müller",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Milchreis/p5.tween.git"
+    },
+    "author": {
+        "name": "Nick 'Milchreis' Müller",
+        "url": "https://github.com/Milchreis"
+    },
     "license": "MIT",
     "devDependencies": {
         "@vamship/grunt-typedoc": "^1.7.4",
