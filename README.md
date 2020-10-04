@@ -4,11 +4,12 @@
 
 ## Usage
 
-1. Add p5.tween.min.js to your sketch after p5.js
+1. Add p5.tween.min.js to your sketch **after p5.js**
 ```html
+<script src="p5.min.js"></script>
 <script src="https://github.com/Milchreis/p5.tween/raw/master/dist/p5.tween.min.js"></script>
 ```
-2. Add a simple tween to your sketch
+2. Add a tween to your sketch
 ```js
 // Adding motions to the TweenManager
 p5.tween.manager
@@ -21,6 +22,7 @@ p5.tween.manager
                 { key: 'x', target: mouseX },
                 { key: 'y', target: mouseY }
             ], 500, 'easeInOutQuint')
+    // Start the tween
     .start()
 ```
 

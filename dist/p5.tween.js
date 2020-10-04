@@ -151,19 +151,25 @@ var p5;
 var p5;
 (function (p5) {
     var tween;
-    (function (tween_1) {
+    (function (tween) {
         class TweenManager {
             constructor() {
                 this.tweens = [];
             }
+            getTween(name) {
+                return this.tweens.find(t => t.name === name).tween;
+            }
+            addTween(object, name) {
+                this.tweens.push({ name, tween: new tween.Tween(object) });
+            }
             update(deltaTime) {
-                for (let tween of this.tweens) {
-                    tween.update(deltaTime);
+                for (let tweenItem of this.tweens) {
+                    tweenItem.tween.update(deltaTime);
                 }
             }
         }
-        tween_1.manager = new TweenManager();
-        p5['prototype'].registerMethod('pre', () => tween_1.manager.update(p5['deltaTime']));
+        tween.manager = new TweenManager();
+        p5['prototype'].registerMethod('pre', () => tween.manager.update(p5['deltaTime']));
     })(tween = p5.tween || (p5.tween = {}));
 })(p5 || (p5 = {}));
 //# sourceMappingURL=TweenManager.js.map
