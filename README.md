@@ -2,6 +2,8 @@
 
 > With p5.tween you can create easily animations as tweens
 
+![logo](https://github.com/Milchreis/p5.tween/blob/master/logo.png)
+
 ## Usage
 
 1. Add p5.tween.min.js to your sketch **after p5.js**
