@@ -46,8 +46,8 @@ p5.tween.manager.addTween(myShape)
     .addMotion('y', 200, 500)
     .startLoop()
 ```
-[Demo](https://editor.p5js.org/Milchreis/present/u1IL1Tqzm)
-[Code](https://editor.p5js.org/Milchreis/sketches/u1IL1Tqzm)
+- [Demo](https://editor.p5js.org/Milchreis/present/u1IL1Tqzm)
+- [Code](https://editor.p5js.org/Milchreis/sketches/u1IL1Tqzm)
 
 ### Create a tween with simultanious motions
 ```js
@@ -66,8 +66,8 @@ p5.tween.manager.addTween(myShape)
       ], 500)
     .startLoop()
 ```
-[Demo](https://editor.p5js.org/Milchreis/present/VZVfZiFvL)
-[Code](https://editor.p5js.org/Milchreis/sketches/VZVfZiFvL)
+- [Demo](https://editor.p5js.org/Milchreis/present/VZVfZiFvL)
+- [Code](https://editor.p5js.org/Milchreis/sketches/VZVfZiFvL)
 
 ## 📖 API
  * [API-Doc](https://milchreis.github.io/p5.tween/docs)
