@@ -1,10 +1,14 @@
 # p5.tween
 
+[![GitHub license](https://img.shields.io/github/license/Milchreis/p5.tween.svg)](https://github.com/Milchreis/p5.tween/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/Milchreis/p5.tween.svg)](https://GitHub.com/Milchreis/p5.tween/releases/)
+![npm](https://img.shields.io/npm/dt/p5.tween)
+
 > With p5.tween you can create easily animations as tweens
 
 ![logo](https://github.com/Milchreis/p5.tween/blob/master/logo.png)
 
-## Usage
+## 🚀 Usage
 
 1. Add p5.tween.min.js to your sketch **after p5.js**
 ```html
@@ -28,7 +32,7 @@ p5.tween.manager
     .start()
 ```
 
-## Examples
+## 👩‍🔬 Examples
 All examples are saved in the p5.tween collection: https://editor.p5js.org/Milchreis/collections/oHxcCR17k
 
 ### Create a tween with step by step motions
@@ -63,7 +67,7 @@ p5.tween.manager.addTween(myShape)
 ```
 [Example-Code](https://editor.p5js.org/Milchreis/present/VZVfZiFvL)
 
-## API
+## 📖 API
  * [API-Doc](https://milchreis.github.io/p5.tween/docs)
   * [TweenManager methods](https://milchreis.github.io/p5.tween/docs/classes/_tweenmanager_.p5.tween.tweenmanager.html)
   * [Tween methods](https://milchreis.github.io/p5.tween/docs/classes/_tween_.p5.tween.tween.html)
@@ -111,3 +115,9 @@ tween.addMotion('width', 12, 100, 'easeOutQuad')
  * easeInQuint: accelerating from zero velocity
  * easeOutQuint: decelerating to zero velocity 
  * easeInOutQuint: acceleration until halfway, then deceleration
+
+## :beers: Contributing
+If there's a missing feature you'd like to see on p5.tween, feel free to write it and submit a pull request. Something broke? Please try to fix it! Also feel free to submit issues, bug reports and requests for future features.
+
+## :scroll: Licensing  
+The **p5.tween** library is licensed under the MIT License. You can find a copy of the MIT License on this repository.
