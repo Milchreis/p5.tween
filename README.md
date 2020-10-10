@@ -83,11 +83,12 @@ let tween = p5.tween.manager.addTween(yourObject, 'name for your tween')
 let tween = p5.tween.manager.getTween('name for your tween')
 
 // Adds a motion for the 'key' of 'yourObject' (means yourObject.key) 
-// to the target value in the given time
+// to the target value in the given time milli seconds
 tween.addMotion('key', targetValue, timeInMillis)
 
-// Adds multiple motions to the tween, which will be played in the same time
-tween.addMotions([{ key, target }])
+// Adds multiple motions to the tween, 
+// which will be played in the same time
+tween.addMotions([{ key, target }], timeInMillis)
 
 // Removes all motions from tween
 tween.resetMotions()
