@@ -6,7 +6,7 @@
 
 > With p5.tween you can create easily animations as tweens
 
-![logo](https://github.com/Milchreis/p5.tween/blob/master/logo.png)
+[![logo](https://raw.githubusercontent.com/Milchreis/p5.tween/master/p5.tween.gif)](https://editor.p5js.org/Milchreis/sketches/Ypr3RYWfL)
 
 ## 🚀 Usage
 
