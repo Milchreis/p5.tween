@@ -4,7 +4,7 @@
 [![GitHub release](https://img.shields.io/github/release/Milchreis/p5.tween.svg)](https://GitHub.com/Milchreis/p5.tween/releases/)
 ![npm](https://img.shields.io/npm/dt/p5.tween)
 
-> With p5.tween you can create easily animations as tweens
+> With p5.tween you can create easily animations as tween in a few keyframes
 
 [![logo](https://raw.githubusercontent.com/Milchreis/p5.tween/master/p5.tween.gif)](https://editor.p5js.org/Milchreis/sketches/Ypr3RYWfL)
 
