@@ -119,8 +119,8 @@ tween.addMotion('width', 12, 100, 'easeOutQuad')
  * easeOutQuint: decelerating to zero velocity 
  * easeInOutQuint: acceleration until halfway, then deceleration
 
-## :beers: Contributing
+## 🍻 Contributing
 If there's a missing feature you'd like to see on p5.tween, feel free to write it and submit a pull request. Something broke? Please try to fix it! Also feel free to submit issues, bug reports and requests for future features.
 
-## :scroll: Licensing  
+## 📜 Licensing  
 The **p5.tween** library is licensed under the MIT License. You can find a copy of the MIT License on this repository.
