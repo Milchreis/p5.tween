@@ -118,6 +118,12 @@ tween.addMotion('width', 12, 100, 'easeOutQuad')
  * easeInQuint: accelerating from zero velocity
  * easeOutQuint: decelerating to zero velocity 
  * easeInOutQuint: acceleration until halfway, then deceleration
+ * easeInElastic: elastic bounce effect at the beginning
+ * easeOutElastic: elastic bounce effect at the end
+ * easeInOutElastic: elastic bounce effect at the beginning and end
+ * easeInSin: accelerating sinus
+ * easeOutSin: decelerating sinus
+ * easeInOutSin: acceleration until halfway, then deceleration
 
 ## :beers: Contributing
 If there's a missing feature you'd like to see on p5.tween, feel free to write it and submit a pull request. Something broke? Please try to fix it! Also feel free to submit issues, bug reports and requests for future features.
