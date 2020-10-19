@@ -2,9 +2,9 @@
 
 [![GitHub license](https://img.shields.io/github/license/Milchreis/p5.tween.svg)](https://github.com/Milchreis/p5.tween/blob/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/release/Milchreis/p5.tween.svg)](https://GitHub.com/Milchreis/p5.tween/releases/)
-![npm](https://img.shields.io/npm/dt/p5.tween)
+[![npm](https://img.shields.io/npm/dt/p5.tween)](https://www.npmjs.com/package/p5.tween)
 
-> With p5.tween you can create easily animations as tweens
+> With p5.tween you can create easily animations as tween in a few keyframes
 
 [![logo](https://raw.githubusercontent.com/Milchreis/p5.tween/master/p5.tween.gif)](https://editor.p5js.org/Milchreis/sketches/Ypr3RYWfL)
 
@@ -125,8 +125,8 @@ tween.addMotion('width', 12, 100, 'easeOutQuad')
  * easeOutSin: decelerating sinus
  * easeInOutSin: acceleration until halfway, then deceleration
 
-## :beers: Contributing
+## 🍻 Contributing
 If there's a missing feature you'd like to see on p5.tween, feel free to write it and submit a pull request. Something broke? Please try to fix it! Also feel free to submit issues, bug reports and requests for future features.
 
-## :scroll: Licensing  
+## 📜 Licensing  
 The **p5.tween** library is licensed under the MIT License. You can find a copy of the MIT License on this repository.
