@@ -2,6 +2,7 @@
 
 [![GitHub license](https://img.shields.io/github/license/Milchreis/p5.tween.svg)](https://github.com/Milchreis/p5.tween/blob/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/release/Milchreis/p5.tween.svg)](https://GitHub.com/Milchreis/p5.tween/releases/)
+[![Package size](http://img.badgesize.io/https://unpkg.com/p5.tween/dist/p5.tween.min.js?compression=gzip&amp;label=size)](https://unpkg.com/p5.tween/dist/p5.tween.min.js)
 [![npm](https://img.shields.io/npm/dt/p5.tween)](https://www.npmjs.com/package/p5.tween)
 
 > With p5.tween you can create easily animations as tween in a few keyframes
