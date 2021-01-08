@@ -36,6 +36,8 @@ p5.tween.manager
 ## 👩‍🔬 Examples
 All examples are saved in the p5.tween collection: https://editor.p5js.org/Milchreis/collections/oHxcCR17k
 
+ * [Animated Clock](https://editor.p5js.org/Milchreis/present/euDDMbdjP) ([Code](https://editor.p5js.org/Milchreis/sketches/euDDMbdjP))
+
 ### Create a tween with step by step motions
 ```js
 p5.tween.manager.addTween(myShape)
