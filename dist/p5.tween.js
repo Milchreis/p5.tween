@@ -15,7 +15,13 @@ var p5;
             easeInOutQuart: (t) => t < .5 ? 8 * t * t * t * t : 1 - 8 * (--t) * t * t * t,
             easeInQuint: (t) => t * t * t * t * t,
             easeOutQuint: (t) => 1 + (--t) * t * t * t * t,
-            easeInOutQuint: (t) => t < .5 ? 16 * t * t * t * t * t : 1 + 16 * (--t) * t * t * t * t
+            easeInOutQuint: (t) => t < .5 ? 16 * t * t * t * t * t : 1 + 16 * (--t) * t * t * t * t,
+            easeInElastic: (t) => (.04 - .04 / t) * Math.sin(25 * t) + 1,
+            easeOutElastic: (t) => .04 * t / (--t) * Math.sin(25 * t),
+            easeInOutElastic: (t) => (t -= .5) < 0 ? (.02 + .01 / t) * Math.sin(50 * t) : (.02 - .01 / t) * Math.sin(50 * t) + 1,
+            easeInSin: (t) => 1 + Math.sin(Math.PI / 2 * t - Math.PI / 2),
+            easeOutSin: (t) => Math.sin(Math.PI / 2 * t),
+            easeInOutSin: (t) => (1 + Math.sin(Math.PI * t - Math.PI / 2)) / 2
         };
     })(tween = p5.tween || (p5.tween = {}));
 })(p5 || (p5 = {}));
@@ -109,7 +115,7 @@ var p5;
                 if (!motion.actions)
                     return;
                 for (let action of motion.actions) {
-                    if (action.key && action.target) {
+                    if (action.key && !isNaN(action.target)) {
                         const progress = Math.min(motion.leftTime / motion.duration, 1.0);
                         this.obj[action.key] = this.interpolation(this.motionStart[action.key], action.target, progress, motion.easing);
                     }

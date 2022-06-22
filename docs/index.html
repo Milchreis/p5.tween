@@ -67,15 +67,20 @@
 				<a href="#p5tween" id="p5tween" style="color: inherit; text-decoration: none;">
 					<h1>p5.tween</h1>
 				</a>
+				<p><a href="https://github.com/Milchreis/p5.tween/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Milchreis/p5.tween.svg" alt="GitHub license"></a>
+					<a href="https://GitHub.com/Milchreis/p5.tween/releases/"><img src="https://img.shields.io/github/release/Milchreis/p5.tween.svg" alt="GitHub release"></a>
+					<a href="https://unpkg.com/p5.tween/dist/p5.tween.min.js"><img src="http://img.badgesize.io/https://unpkg.com/p5.tween/dist/p5.tween.min.js?compression=gzip&amp;label=size" alt="Package size"></a>
+				<a href="https://www.npmjs.com/package/p5.tween"><img src="https://img.shields.io/npm/dt/p5.tween" alt="npm"></a></p>
 				<blockquote>
-					<p>With p5.tween you can create easily animations as tweens</p>
+					<p>With p5.tween you can create easily animations as tween in a few keyframes</p>
 				</blockquote>
-				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
-					<h2>Usage</h2>
+				<p><a href="https://editor.p5js.org/Milchreis/sketches/Ypr3RYWfL"><img src="https://raw.githubusercontent.com/Milchreis/p5.tween/master/p5.tween.gif" alt="logo"></a></p>
+				<a href="#🚀-usage" id="🚀-usage" style="color: inherit; text-decoration: none;">
+					<h2>🚀 Usage</h2>
 				</a>
 				<ol>
 					<li>Add p5.tween.min.js to your sketch <strong>after p5.js</strong><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;p5.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://github.com/Milchreis/p5.tween/raw/master/dist/p5.tween.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://unpkg.com/p5.tween@1.0.0/dist/p5.tween.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
 					</li>
 					<li>Add a tween to your sketch<pre><code class="language-js"><span class="hljs-comment">// Adding motions to the TweenManager</span>
 p5.tween.manager
@@ -83,7 +88,7 @@ p5.tween.manager
  .addTween(object, <span class="hljs-string">&#x27;tween1&#x27;</span>)
  <span class="hljs-comment">// First motion: change the width (means object.width) to 12 in 100ms</span>
  .addMotion(<span class="hljs-string">&#x27;width&#x27;</span>, <span class="hljs-number">12</span>, <span class="hljs-number">100</span>, <span class="hljs-string">&#x27;easeInOutQuint&#x27;</span>)
- <span class="hljs-comment">// Second Motion: Change x and y to mouse position in 500ms at the same time</span>
+ <span class="hljs-comment">// Second motion: Change x and y to mouse position in 500ms at the same time</span>
  .addMotions([
              { <span class="hljs-attr">key</span>: <span class="hljs-string">&#x27;x&#x27;</span>, <span class="hljs-attr">target</span>: mouseX },
              { <span class="hljs-attr">key</span>: <span class="hljs-string">&#x27;y&#x27;</span>, <span class="hljs-attr">target</span>: mouseY }
@@ -92,10 +97,13 @@ p5.tween.manager
  .start()</code></pre>
 					</li>
 				</ol>
-				<a href="#examples" id="examples" style="color: inherit; text-decoration: none;">
-					<h2>Examples</h2>
+				<a href="#👩🔬-examples" id="👩🔬-examples" style="color: inherit; text-decoration: none;">
+					<h2>👩‍🔬 Examples</h2>
 				</a>
 				<p>All examples are saved in the p5.tween collection: <a href="https://editor.p5js.org/Milchreis/collections/oHxcCR17k">https://editor.p5js.org/Milchreis/collections/oHxcCR17k</a></p>
+				<ul>
+					<li><a href="https://editor.p5js.org/Milchreis/present/euDDMbdjP">Animated Clock</a> (<a href="https://editor.p5js.org/Milchreis/sketches/euDDMbdjP">Code</a>)</li>
+				</ul>
 				<a href="#create-a-tween-with-step-by-step-motions" id="create-a-tween-with-step-by-step-motions" style="color: inherit; text-decoration: none;">
 					<h3>Create a tween with step by step motions</h3>
 				</a>
@@ -107,7 +115,10 @@ p5.tween.manager
     .addMotion(<span class="hljs-string">&#x27;x&#x27;</span>, <span class="hljs-number">200</span>, <span class="hljs-number">500</span>)
     .addMotion(<span class="hljs-string">&#x27;y&#x27;</span>, <span class="hljs-number">200</span>, <span class="hljs-number">500</span>)
     .startLoop()</code></pre>
-				<p><a href="https://editor.p5js.org/Milchreis/present/u1IL1Tqzm">Example-Code</a></p>
+				<ul>
+					<li><a href="https://editor.p5js.org/Milchreis/present/u1IL1Tqzm">Demo</a></li>
+					<li><a href="https://editor.p5js.org/Milchreis/sketches/u1IL1Tqzm">Code</a></li>
+				</ul>
 				<a href="#create-a-tween-with-simultanious-motions" id="create-a-tween-with-simultanious-motions" style="color: inherit; text-decoration: none;">
 					<h3>Create a tween with simultanious motions</h3>
 				</a>
@@ -125,12 +136,19 @@ p5.tween.manager
         { <span class="hljs-attr">key</span>: <span class="hljs-string">&#x27;y&#x27;</span>, <span class="hljs-attr">target</span>: <span class="hljs-number">200</span> },
       ], <span class="hljs-number">500</span>)
     .startLoop()</code></pre>
-				<p><a href="https://editor.p5js.org/Milchreis/present/VZVfZiFvL">Example-Code</a></p>
-				<a href="#api" id="api" style="color: inherit; text-decoration: none;">
-					<h2>API</h2>
+				<ul>
+					<li><a href="https://editor.p5js.org/Milchreis/present/VZVfZiFvL">Demo</a></li>
+					<li><a href="https://editor.p5js.org/Milchreis/sketches/VZVfZiFvL">Code</a></li>
+				</ul>
+				<a href="#📖-api" id="📖-api" style="color: inherit; text-decoration: none;">
+					<h2>📖 API</h2>
 				</a>
 				<ul>
-					<li><a href="https://milchreis.github.io/p5.tween/docs">API-Doc</a></li>
+					<li><a href="https://milchreis.github.io/p5.tween/docs">API-Doc</a><ul>
+							<li><a href="https://milchreis.github.io/p5.tween/docs/classes/_tweenmanager_.p5.tween.tweenmanager.html">TweenManager methods</a></li>
+							<li><a href="https://milchreis.github.io/p5.tween/docs/classes/_tween_.p5.tween.tween.html">Tween methods</a></li>
+						</ul>
+					</li>
 				</ul>
 				<a href="#most-used-methods" id="most-used-methods" style="color: inherit; text-decoration: none;">
 					<h3>Most used methods</h3>
@@ -142,11 +160,12 @@ p5.tween.manager
 <span class="hljs-keyword">let</span> tween = p5.tween.manager.getTween(<span class="hljs-string">&#x27;name for your tween&#x27;</span>)
 
 <span class="hljs-comment">// Adds a motion for the &#x27;key&#x27; of &#x27;yourObject&#x27; (means yourObject.key) </span>
-<span class="hljs-comment">// to the target value in the given time</span>
+<span class="hljs-comment">// to the target value in the given time milli seconds</span>
 tween.addMotion(<span class="hljs-string">&#x27;key&#x27;</span>, targetValue, timeInMillis)
 
-<span class="hljs-comment">// Adds multiple motions to the tween, which will be played in the same time</span>
-tween.addMotions([{ key, target }])
+<span class="hljs-comment">// Adds multiple motions to the tween, </span>
+<span class="hljs-comment">// which will be played in the same time</span>
+tween.addMotions([{ key, target }], timeInMillis)
 
 <span class="hljs-comment">// Removes all motions from tween</span>
 tween.resetMotions()
@@ -175,7 +194,21 @@ tween.startTween()</code></pre>
 					<li>easeInQuint: accelerating from zero velocity</li>
 					<li>easeOutQuint: decelerating to zero velocity </li>
 					<li>easeInOutQuint: acceleration until halfway, then deceleration</li>
+					<li>easeInElastic: elastic bounce effect at the beginning</li>
+					<li>easeOutElastic: elastic bounce effect at the end</li>
+					<li>easeInOutElastic: elastic bounce effect at the beginning and end</li>
+					<li>easeInSin: accelerating sinus</li>
+					<li>easeOutSin: decelerating sinus</li>
+					<li>easeInOutSin: acceleration until halfway, then deceleration</li>
 				</ul>
+				<a href="#🍻-contributing" id="🍻-contributing" style="color: inherit; text-decoration: none;">
+					<h2>🍻 Contributing</h2>
+				</a>
+				<p>If there&#39;s a missing feature you&#39;d like to see on p5.tween, feel free to write it and submit a pull request. Something broke? Please try to fix it! Also feel free to submit issues, bug reports and requests for future features.</p>
+				<a href="#📜-licensing" id="📜-licensing" style="color: inherit; text-decoration: none;">
+					<h2>📜 Licensing</h2>
+				</a>
+				<p>The <strong>p5.tween</strong> library is licensed under the MIT License. You can find a copy of the MIT License on this repository.</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
