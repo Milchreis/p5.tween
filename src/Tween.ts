@@ -132,7 +132,7 @@ namespace p5.tween {
                 return
 
             for (let action of motion.actions) {
-                if (action.key && action.target) {
+                if (action.key && !isNaN(action.target)) {
                     const progress = Math.min(motion.leftTime / motion.duration, 1.0)
                     this.obj[action.key] = this.interpolation(
                         this.motionStart[action.key],
