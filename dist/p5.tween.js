@@ -36,6 +36,7 @@ var p5;
                 this.keyChanges = [];
                 this.active = false;
                 this.isLoop = false;
+                this.isPaused = false;
                 this.currentMotionIndex = 0;
                 this.obj = objStart;
             }
@@ -93,8 +94,16 @@ var p5;
                 this.active = true;
                 return this;
             }
+            pause() {
+                this.isPaused = true;
+                return this;
+            }
+            resume() {
+                this.isPaused = false;
+                return this;
+            }
             update(deltaTime) {
-                if (!this.active)
+                if (!this.active || this.isPaused)
                     return;
                 const motion = this.motions[this.currentMotionIndex];
                 if (motion.leftTime >= motion.duration) {

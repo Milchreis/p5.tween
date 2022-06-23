@@ -104,6 +104,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_tween_.p5.tween.tween.html#active" class="tsd-kind-icon">active</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_tween_.p5.tween.tween.html#currentmotionindex" class="tsd-kind-icon">current<wbr>Motion<wbr>Index</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_tween_.p5.tween.tween.html#isloop" class="tsd-kind-icon">is<wbr>Loop</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_tween_.p5.tween.tween.html#ispaused" class="tsd-kind-icon">is<wbr>Paused</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_tween_.p5.tween.tween.html#keychanges" class="tsd-kind-icon">key<wbr>Changes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_tween_.p5.tween.tween.html#motionstart" class="tsd-kind-icon">motion<wbr>Start</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_tween_.p5.tween.tween.html#motions" class="tsd-kind-icon">motions</a></li>
@@ -119,8 +120,10 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_tween_.p5.tween.tween.html#addtokeychangelist" class="tsd-kind-icon">add<wbr>ToKey<wbr>Change<wbr>List</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_tween_.p5.tween.tween.html#createstartobject" class="tsd-kind-icon">create<wbr>Start<wbr>Object</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_tween_.p5.tween.tween.html#interpolation" class="tsd-kind-icon">interpolation</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_tween_.p5.tween.tween.html#pause" class="tsd-kind-icon">pause</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_tween_.p5.tween.tween.html#resetmotions" class="tsd-kind-icon">reset<wbr>Motions</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_tween_.p5.tween.tween.html#resettostart" class="tsd-kind-icon">reset<wbr>ToStart</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_tween_.p5.tween.tween.html#resume" class="tsd-kind-icon">resume</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_tween_.p5.tween.tween.html#startloop" class="tsd-kind-icon">start<wbr>Loop</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_tween_.p5.tween.tween.html#starttween" class="tsd-kind-icon">start<wbr>Tween</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_tween_.p5.tween.tween.html#update" class="tsd-kind-icon">update</a></li>
@@ -141,7 +144,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/eb6c33b/src/Tween.ts#L11">Tween.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L12">Tween.ts:12</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -163,7 +166,7 @@
 					<div class="tsd-signature tsd-kind-icon">active<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/eb6c33b/src/Tween.ts#L9">Tween.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L9">Tween.ts:9</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -173,7 +176,7 @@
 					<div class="tsd-signature tsd-kind-icon">current<wbr>Motion<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/eb6c33b/src/Tween.ts#L11">Tween.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L12">Tween.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -183,7 +186,17 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Loop<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/eb6c33b/src/Tween.ts#L10">Tween.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L10">Tween.ts:10</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="ispaused" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> is<wbr>Paused</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Paused<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L11">Tween.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -193,7 +206,7 @@
 					<div class="tsd-signature tsd-kind-icon">key<wbr>Changes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/eb6c33b/src/Tween.ts#L8">Tween.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L8">Tween.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -203,7 +216,7 @@
 					<div class="tsd-signature tsd-kind-icon">motion<wbr>Start<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/eb6c33b/src/Tween.ts#L6">Tween.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L6">Tween.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -213,7 +226,7 @@
 					<div class="tsd-signature tsd-kind-icon">motions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/eb6c33b/src/Tween.ts#L7">Tween.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L7">Tween.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -223,7 +236,7 @@
 					<div class="tsd-signature tsd-kind-icon">obj<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/eb6c33b/src/Tween.ts#L4">Tween.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L4">Tween.ts:4</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -233,7 +246,7 @@
 					<div class="tsd-signature tsd-kind-icon">start<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/eb6c33b/src/Tween.ts#L5">Tween.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L5">Tween.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -250,7 +263,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/eb6c33b/src/Tween.ts#L50">Tween.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L51">Tween.ts:51</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -300,7 +313,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/eb6c33b/src/Tween.ts#L70">Tween.ts:70</a></li>
+									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L71">Tween.ts:71</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -345,7 +358,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/eb6c33b/src/Tween.ts#L31">Tween.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L32">Tween.ts:32</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -368,7 +381,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/eb6c33b/src/Tween.ts#L25">Tween.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L26">Tween.ts:26</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -393,7 +406,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/eb6c33b/src/Tween.ts#L36">Tween.ts:36</a></li>
+									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L37">Tween.ts:37</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -416,6 +429,28 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="pause" class="tsd-anchor"></a>
+					<h3>pause</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">pause<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_tween_.p5.tween.tween.html" class="tsd-signature-type">Tween</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L113">Tween.ts:113</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Stops the tween and holds the current state</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="_tween_.p5.tween.tween.html" class="tsd-signature-type">Tween</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="resetmotions" class="tsd-anchor"></a>
 					<h3>reset<wbr>Motions</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -425,7 +460,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/eb6c33b/src/Tween.ts#L85">Tween.ts:85</a></li>
+									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L86">Tween.ts:86</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -447,10 +482,32 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/eb6c33b/src/Tween.ts#L17">Tween.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L18">Tween.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="resume" class="tsd-anchor"></a>
+					<h3>resume</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">resume<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_tween_.p5.tween.tween.html" class="tsd-signature-type">Tween</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L121">Tween.ts:121</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Starts the tween from the current state, when the tween was paused</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="_tween_.p5.tween.tween.html" class="tsd-signature-type">Tween</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -464,7 +521,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/eb6c33b/src/Tween.ts#L92">Tween.ts:92</a></li>
+									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L93">Tween.ts:93</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -486,7 +543,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/eb6c33b/src/Tween.ts#L101">Tween.ts:101</a></li>
+									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L102">Tween.ts:102</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -508,7 +565,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/eb6c33b/src/Tween.ts#L109">Tween.ts:109</a></li>
+									<li>Defined in <a href="https://github.com/Milchreis/p5.tween/blob/3e8b513/src/Tween.ts#L126">Tween.ts:126</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -551,6 +608,9 @@
 								<a href="_tween_.p5.tween.tween.html#isloop" class="tsd-kind-icon">is<wbr>Loop</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_tween_.p5.tween.tween.html#ispaused" class="tsd-kind-icon">is<wbr>Paused</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="_tween_.p5.tween.tween.html#keychanges" class="tsd-kind-icon">key<wbr>Changes</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
@@ -581,10 +641,16 @@
 								<a href="_tween_.p5.tween.tween.html#interpolation" class="tsd-kind-icon">interpolation</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_tween_.p5.tween.tween.html#pause" class="tsd-kind-icon">pause</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_tween_.p5.tween.tween.html#resetmotions" class="tsd-kind-icon">reset<wbr>Motions</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
 								<a href="_tween_.p5.tween.tween.html#resettostart" class="tsd-kind-icon">reset<wbr>ToStart</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_tween_.p5.tween.tween.html#resume" class="tsd-kind-icon">resume</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_tween_.p5.tween.tween.html#startloop" class="tsd-kind-icon">start<wbr>Loop</a>

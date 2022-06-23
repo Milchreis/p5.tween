@@ -8,6 +8,7 @@ namespace p5.tween {
         private keyChanges = []
         private active = false
         private isLoop = false
+        private isPaused = false
         private currentMotionIndex = 0
 
         constructor(objStart) {
@@ -106,8 +107,24 @@ namespace p5.tween {
             return this
         }
 
+        /**
+         * Stops the tween and holds the current state
+         */
+        pause(): Tween {
+            this.isPaused = true
+            return this
+        }
+
+        /**
+         * Starts the tween from the current state, when the tween was paused
+         */
+        resume(): Tween {
+            this.isPaused = false
+            return this
+        }
+
         update(deltaTime: number) {
-            if (!this.active) return
+            if (!this.active || this.isPaused) return
 
             const motion = this.motions[this.currentMotionIndex]
 
