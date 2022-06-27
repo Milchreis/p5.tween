@@ -123,6 +123,18 @@ namespace p5.tween {
             return this
         }
 
+        /**
+         * Sets the tween back to the first motion
+         */
+        restart(): Tween {
+            this.pause()
+            this.currentMotionIndex = 0
+            this.motions.forEach(m => m.leftTime = 0)
+            this.resetToStart()
+            this.resume()
+            return this
+        }
+
         update(deltaTime: number) {
             if (!this.active || this.isPaused) return
 

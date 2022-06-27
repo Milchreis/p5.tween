@@ -102,6 +102,14 @@ var p5;
                 this.isPaused = false;
                 return this;
             }
+            restart() {
+                this.pause();
+                this.currentMotionIndex = 0;
+                this.motions.forEach(m => m.leftTime = 0);
+                this.resetToStart();
+                this.resume();
+                return this;
+            }
             update(deltaTime) {
                 if (!this.active || this.isPaused)
                     return;
