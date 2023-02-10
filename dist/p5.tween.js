@@ -122,9 +122,13 @@ var p5;
                         if (this.isLoop) {
                             this.resetToStart();
                             this.currentMotionIndex = 0;
+                            if (this.onLoopListener)
+                                this.onLoopListener(this);
                         }
                         else {
                             this.active = false;
+                            if (this.onEndListener)
+                                this.onEndListener(this);
                         }
                     }
                 }
@@ -137,6 +141,22 @@ var p5;
                         this.obj[action.key] = this.interpolation(this.motionStart[action.key], action.target, progress, motion.easing);
                     }
                 }
+            }
+            onEnd(listener) {
+                if (typeof listener !== 'function') {
+                    console.error("The given event listener for 'onEnd' is not a function. Use .onEnd(function(tween) { /* your code */})");
+                    return;
+                }
+                this.onEndListener = listener;
+                return this;
+            }
+            onLoop(listener) {
+                if (typeof listener !== 'function') {
+                    console.error("The given event listener for 'onLoop' is not a function. Use .onLoop(function(tween) { /* your code */})");
+                    return;
+                }
+                this.onLoopListener = listener;
+                return this;
             }
         }
         tween.Tween = Tween;

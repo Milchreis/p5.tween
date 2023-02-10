@@ -72,6 +72,21 @@ p5.tween.manager.addTween(myShape)
 - [Demo](https://editor.p5js.org/Milchreis/present/VZVfZiFvL)
 - [Code](https://editor.p5js.org/Milchreis/sketches/VZVfZiFvL)
 
+### Using an event on loop
+```js
+    p5.tween.manager.addTween(myShape, 'tween1')
+      .onLoop((tween) => myShape.c = random(0, 255))
+      .addMotions([
+        { key: 'y', target: height },
+        { key: 'w', target: 30 },
+        { key: 'h', target: 80 },
+      ], 600, 'easeInQuad')
+      // ...
+    .startLoop()
+```
+- [Demo](https://editor.p5js.org/Milchreis/present/7lIxFsbWM)
+- [Code](https://editor.p5js.org/Milchreis/sketches/7lIxFsbWM)
+
 ## 📖 API
  * [API-Doc](https://milchreis.github.io/p5.tween/docs)
   * [TweenManager methods](https://milchreis.github.io/p5.tween/docs/classes/_tweenmanager_.p5.tween.tweenmanager.html)
@@ -101,6 +116,10 @@ tween.startLoop()
 
 // Starts the tween and plays all motions one time
 tween.startTween()
+
+// Events
+tween.onLoop((thisTween) => console.log(thisTween))
+tween.onEnd((thisTween) => console.log(thisTween))
 ```
 
 ### Easing functions

@@ -11,6 +11,9 @@ namespace p5.tween {
         private isPaused = false
         private currentMotionIndex = 0
 
+        private onEndListener: Function
+        private onLoopListener: Function
+
         constructor(objStart) {
             this.obj = objStart
         }
@@ -68,7 +71,7 @@ namespace p5.tween {
          * @param duration  expects the duration of this motion in milliseconds
          * @param easing    optional: the name of the easing-function (default is 'linear')
          */
-        addMotions(actions: { key: string, target: number}[], duration: number, easing: string = 'linear'): Tween {
+        addMotions(actions: { key: string, target: number }[], duration: number, easing: string = 'linear'): Tween {
             actions.flatMap(a => a.key).forEach((key: string) => this.addToKeyChangeList(key))
 
             this.motions.push({
@@ -95,7 +98,7 @@ namespace p5.tween {
             this.startTween()
             return this
         }
-        
+
         /**
          * Starts the tween and plays it one time
          */
@@ -149,8 +152,14 @@ namespace p5.tween {
                     if (this.isLoop) {
                         this.resetToStart()
                         this.currentMotionIndex = 0
+
+                        if (this.onLoopListener)
+                            this.onLoopListener(this)
                     } else {
                         this.active = false
+
+                        if (this.onEndListener)
+                            this.onEndListener(this)
                     }
                 }
             }
@@ -170,6 +179,34 @@ namespace p5.tween {
                         motion.easing)
                 }
             }
+        }
+
+        /**
+         * Sets a function which is called when the tween is over.
+         * @param listener    expects a function or lambda which should be executed. The function has one argument which represents the tween it self.
+         */
+        onEnd(listener: Function): Tween {
+            if (typeof listener !== 'function') {
+                console.error("The given event listener for 'onEnd' is not a function. Use .onEnd(function(tween) { /* your code */})")
+                return
+            }
+
+            this.onEndListener = listener
+            return this
+        }
+
+        /**
+         * Sets a function which is called every time the tween has played a complete loop.
+         * @param listener    expects a function or lambda which should be executed. The function has one argument which represents the tween it self.
+         */
+        onLoop(listener: Function): Tween {
+            if (typeof listener !== 'function') {
+                console.error("The given event listener for 'onLoop' is not a function. Use .onLoop(function(tween) { /* your code */})")
+                return
+            }
+
+            this.onLoopListener = listener
+            return this
         }
     }
 }
