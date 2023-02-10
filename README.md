@@ -14,7 +14,7 @@
 1. Add p5.tween.min.js to your sketch **after p5.js**
 ```html
 <script src="p5.min.js"></script>
-<script src="https://unpkg.com/p5.tween@1.0.0/dist/p5.tween.min.js"></script>
+<script src="https://unpkg.com/p5.tween/dist/p5.tween.min.js"></script>
 ```
 2. Add a tween to your sketch
 ```js
