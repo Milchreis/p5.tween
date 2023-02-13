@@ -30,7 +30,7 @@ p5.tween.manager
                 { key: 'y', target: mouseY }
             ], 500, 'easeInOutQuint')
     // Start the tween
-    .start()
+    .startTween()
 ```
 
 ## 👩‍🔬 Examples
