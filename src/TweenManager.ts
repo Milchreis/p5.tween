@@ -40,5 +40,13 @@ namespace p5.tween {
     export const manager = new TweenManager()
 
     // Register the manager.update() method to call it before each draw loop 
-    p5['prototype'].registerMethod('pre', () => manager.update(window['deltaTime']));
+    if(p5['prototype'].registerMethod){
+        p5['prototype'].registerMethod('pre', () => manager.update(window['deltaTime']));
+    }else{
+        p5['registerAddon'](function(p5, fn, lifecycles){
+            lifecycles.predraw = function() {
+                manager.update(this.deltaTime);
+            }
+        });
+    }
 }

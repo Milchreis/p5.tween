@@ -80,7 +80,7 @@
 				</a>
 				<ol>
 					<li>Add p5.tween.min.js to your sketch <strong>after p5.js</strong><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;p5.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://unpkg.com/p5.tween@1.0.0/dist/p5.tween.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://unpkg.com/p5.tween/dist/p5.tween.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
 					</li>
 					<li>Add a tween to your sketch<pre><code class="language-js"><span class="hljs-comment">// Adding motions to the TweenManager</span>
 p5.tween.manager
@@ -94,7 +94,7 @@ p5.tween.manager
              { <span class="hljs-attr">key</span>: <span class="hljs-string">&#x27;y&#x27;</span>, <span class="hljs-attr">target</span>: mouseY }
          ], <span class="hljs-number">500</span>, <span class="hljs-string">&#x27;easeInOutQuint&#x27;</span>)
  <span class="hljs-comment">// Start the tween</span>
- .start()</code></pre>
+ .startTween()</code></pre>
 					</li>
 				</ol>
 				<a href="#👩🔬-examples" id="👩🔬-examples" style="color: inherit; text-decoration: none;">
@@ -140,6 +140,22 @@ p5.tween.manager
 					<li><a href="https://editor.p5js.org/Milchreis/present/VZVfZiFvL">Demo</a></li>
 					<li><a href="https://editor.p5js.org/Milchreis/sketches/VZVfZiFvL">Code</a></li>
 				</ul>
+				<a href="#using-an-event-on-loop" id="using-an-event-on-loop" style="color: inherit; text-decoration: none;">
+					<h3>Using an event on loop</h3>
+				</a>
+				<pre><code class="language-js">    p5.tween.manager.addTween(myShape, <span class="hljs-string">&#x27;tween1&#x27;</span>)
+      .onLoop(<span class="hljs-function">(<span class="hljs-params">tween</span>) =&gt;</span> myShape.c = random(<span class="hljs-number">0</span>, <span class="hljs-number">255</span>))
+      .addMotions([
+        { <span class="hljs-attr">key</span>: <span class="hljs-string">&#x27;y&#x27;</span>, <span class="hljs-attr">target</span>: height },
+        { <span class="hljs-attr">key</span>: <span class="hljs-string">&#x27;w&#x27;</span>, <span class="hljs-attr">target</span>: <span class="hljs-number">30</span> },
+        { <span class="hljs-attr">key</span>: <span class="hljs-string">&#x27;h&#x27;</span>, <span class="hljs-attr">target</span>: <span class="hljs-number">80</span> },
+      ], <span class="hljs-number">600</span>, <span class="hljs-string">&#x27;easeInQuad&#x27;</span>)
+      <span class="hljs-comment">// ...</span>
+    .startLoop()</code></pre>
+				<ul>
+					<li><a href="https://editor.p5js.org/Milchreis/present/7lIxFsbWM">Demo</a></li>
+					<li><a href="https://editor.p5js.org/Milchreis/sketches/7lIxFsbWM">Code</a></li>
+				</ul>
 				<a href="#📖-api" id="📖-api" style="color: inherit; text-decoration: none;">
 					<h2>📖 API</h2>
 				</a>
@@ -174,7 +190,11 @@ tween.resetMotions()
 tween.startLoop()
 
 <span class="hljs-comment">// Starts the tween and plays all motions one time</span>
-tween.startTween()</code></pre>
+tween.startTween()
+
+<span class="hljs-comment">// Events</span>
+tween.onLoop(<span class="hljs-function">(<span class="hljs-params">thisTween</span>) =&gt;</span> <span class="hljs-built_in">console</span>.log(thisTween))
+tween.onEnd(<span class="hljs-function">(<span class="hljs-params">thisTween</span>) =&gt;</span> <span class="hljs-built_in">console</span>.log(thisTween))</code></pre>
 				<a href="#easing-functions" id="easing-functions" style="color: inherit; text-decoration: none;">
 					<h3>Easing functions</h3>
 				</a>

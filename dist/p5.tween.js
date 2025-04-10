@@ -194,7 +194,7 @@ var p5;
 })(p5 || (p5 = {}));
 //# sourceMappingURL=GeometricObjectTween.js.map
 var p5;
-(function (p5) {
+(function (p5_1) {
     var tween;
     (function (tween_1) {
         class TweenManager {
@@ -217,7 +217,16 @@ var p5;
             }
         }
         tween_1.manager = new TweenManager();
-        p5['prototype'].registerMethod('pre', () => tween_1.manager.update(window['deltaTime']));
-    })(tween = p5.tween || (p5.tween = {}));
+        if (p5['prototype'].registerMethod) {
+            p5['prototype'].registerMethod('pre', () => tween_1.manager.update(window['deltaTime']));
+        }
+        else {
+            p5['registerAddon'](function (p5, fn, lifecycles) {
+                lifecycles.predraw = function () {
+                    tween_1.manager.update(this.deltaTime);
+                };
+            });
+        }
+    })(tween = p5_1.tween || (p5_1.tween = {}));
 })(p5 || (p5 = {}));
 //# sourceMappingURL=TweenManager.js.map
